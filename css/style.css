@@ -1,0 +1,265 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/*font*/
+h1 {
+    color: #000000;
+    font-weight: bold;
+    font-family: 'Shadows Into Light Two', cursive;
+}
+
+h2, h3, p {
+    color: #3a3a3a;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/*mobile*/
+.wrapper {
+    max-width: 1000vw;
+    background-color: #e0e0e0;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-rows: auto;
+    grid-template-areas: "nav"
+                         "header"
+                         "main"
+                         "footer";
+}
+
+
+/*tablet*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .wrapper {
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: auto;
+        grid-template-areas: "nav nav nav nav"
+                             "header header header header"
+                             "main main main main"
+                             "footer footer footer footer";
+    }
+
+    article .hidden_phone {
+        display: inline;
+    }
+
+    section .hidden_phone {
+        display: inline;
+    }
+
+    footer > .location {
+        display: flex;
+        flex-direction: row;
+    }
+
+    footer > .location > img {
+        width: 40%;
+    }
+}
+
+
+/*desktop*/
+@media only screen and (min-width: 1024px) {
+    .wrapper {
+        grid-template-columns: repeat(6, 1fr);
+        grid-auto-rows: auto;
+        grid-template-areas: "nav nav nav nav nav nav"
+                             "header header header header header header"
+                             "main main main main main main"
+                             "footer footer footer footer footer footer";
+    }
+
+    article .hidden_phone {
+        display: inline;
+    }
+
+    section .hidden_phone {
+        display: inline;
+    }
+
+    section .hidden_phone_images {
+        display: inline;
+    }
+
+    footer > .location {
+        display: flex;
+        flex-direction: row;
+    }
+
+    footer > .location > img {
+        width: 30%;
+    }
+} 
+
+
+
+/*navigation bar*/
+
+nav {
+    grid-area: nav;
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    position: fixed;
+    background-color: #cfcecea4;
+    padding: 1rem;
+}
+
+.fas.fa-seedling {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    color: #3a3a3a;
+    margin-right: 2rem;
+}
+
+.menu {
+    width: 100%;
+    margin-right: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+
+a {
+    list-style-type: none;
+    text-decoration: none;
+    color: #3a3a3a;
+}
+
+input[type=text] {
+    border: none;
+    border-radius: 5px;
+    background-color: #f3f3f3a4;
+}
+
+.fas.fa-search {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    color: #3a3a3a;
+}
+
+
+
+
+/*header*/  
+header {
+    grid-area: header;
+    width: 100%;
+    height: 50vw;
+    background-image: linear-gradient(rgba(165, 165, 165, 0.5), rgba(63, 63, 63, 0.5)), url(/img/sky.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
+
+
+/*main*/
+main {
+    grid-area: main;
+    width: 100%;
+    padding: 3rem;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden_phone {
+    display: none;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/*images*/
+
+img {
+    margin: 0.5rem;
+    width: 100%;
+    height: auto;
+}
+
+
+.img_horizon {
+    padding: 1rem;
+    background-color: #cfcecea4;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.img_vertical {
+    padding: 1rem;
+    background-color: #cfcecea4;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.hidden_phone_images {
+    display: none;
+}
+
+
+
+
+/*footer*/
+footer {
+    grid-area: footer;
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #cfcecea4;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+.location {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.location > img {
+    width: 50%;
+}
+
+.contact > li {
+    list-style-type: none;
+    margin-left: 2rem;
+    padding: 0;
+    text-decoration: none;
+}
+
+
+
+
